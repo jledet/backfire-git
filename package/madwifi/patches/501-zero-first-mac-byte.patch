@@ -1,0 +1,22 @@
+--- a/ath/if_ath.c	2010-07-13 22:33:42.000000000 +0200
++++ b/ath/if_ath.c	2010-07-13 22:33:12.000000000 +0200
+@@ -586,7 +586,7 @@
+ 	int error = 0;
+ 	unsigned int i;
+ 	int autocreatemode = -1;
+-	u_int8_t csz;
++	u_int8_t csz, mac_buff[6];
+ 
+ 	sc->devid = devid;
+ #ifdef AR_DEBUG
+@@ -656,6 +656,10 @@
+ 	}
+ #endif
+ 
++	ath_hal_getmac(ah, mac_buff);
++	mac_buff[0] = 0;
++	ath_hal_setmac(ah, mac_buff);
++
+ 	/*
+ 	 * Check if the MAC has multi-rate retry support.
+ 	 * We do this by trying to setup a fake extended

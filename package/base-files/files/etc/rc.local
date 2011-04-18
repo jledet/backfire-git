@@ -1,4 +1,48 @@
-# Put your custom commands here that should be executed once
-# the system init finished. By default this file does nothing.
+#!/bin/sh
 
-exit 0
+# Detect my guest number
+LB=$(ifconfig eth0| grep HWaddr | sed 's/:01[\n\ ]*$//' | sed 's/.*://'| sed 's/[\n\ ].*//')
+
+case "${LB}" in
+    "19")
+        NUM="100"
+        ;;
+    "D9")
+        NUM="101"
+        ;;
+    "15")
+        NUM="102"
+        ;;
+    "81")
+        NUM="103"
+        ;;
+    "09")
+        NUM="104"
+        ;;
+    "87")
+        NUM="105"
+        ;;
+    "A3")
+        NUM="106"
+        ;;
+    "79")
+        NUM="107"
+        ;;
+    "59")
+        NUM="108"
+        ;;
+    "D5")
+        NUM="109"
+        ;;
+    *)
+        NUM="200"
+esac
+
+ifconfig eth0 10.0.0.${NUM}
+ifconfig eth0 netmask 255.255.255.0
+
+ifconfig mesh0 10.10.0.${NUM}
+ifconfig mesh0 netmask 255.255.255.0
+ifconfig mesh0 mtu 1600
+ifconfig mesh0 up
+batctl if add mesh0
