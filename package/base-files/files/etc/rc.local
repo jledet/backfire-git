@@ -6,7 +6,7 @@ ARCH=$(uname -m)
 # Detect my guest number
 LB=$(ifconfig eth0| grep HWaddr | sed 's/:01[\n\ ]*$//' | sed 's/.*://'| sed 's/[\n\ ].*//')
 
-if [ ${ARCH} = "x86" ]; then
+if [ ${ARCH} = "i686" ]; then
 
     # Setup for emulation
     IF="eth0"
