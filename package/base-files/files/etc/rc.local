@@ -76,6 +76,7 @@ echo ${NODE} > /proc/sys/kernel/hostname
 ifconfig ${IF} netmask 255.255.255.0
 ifconfig ${IF} mtu 1600
 ifconfig ${IF} up
+ifconfig ${IF} promisc
 batctl if add ${IF}
 ifconfig bat0 10.10.0.${NUM}
 ifconfig bat0 up
