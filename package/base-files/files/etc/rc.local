@@ -11,6 +11,7 @@ if [ ${ARCH} = "i686" ]; then
     # Setup for emulation
     IF="eth0"
     NUM=${LB}
+    NODE="n${LB}"
 
 else
 
@@ -62,18 +63,19 @@ else
 	    NUM="200"
     esac
 
-    # Setup hostname
-    sed -i -e "s/OpenWrt/${NODE}/" /etc/config/system
-    echo ${NODE} > /proc/sys/kernel/hostname
-
     ifconfig eth0 10.0.0.${NUM}
     ifconfig eth0 netmask 255.255.255.0
 
 fi
 
+# Setup hostname
+sed -i -e "s/OpenWrt/${NODE}/" /etc/config/system
+echo ${NODE} > /proc/sys/kernel/hostname
+
 # Setup B.A.T.M.A.N.
-ifconfig ${IF} 10.0.0.${NUM}
 ifconfig ${IF} netmask 255.255.255.0
 ifconfig ${IF} mtu 1600
 ifconfig ${IF} up
 batctl if add ${IF}
+ifconfig bat0 10.10.0.${NUM}
+ifconfig bat0 up
