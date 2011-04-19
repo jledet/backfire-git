@@ -18,49 +18,49 @@ else
     # Setup for OM1P
     IF="mesh0"
     case "${LB}" in
-	"19")
-	    NODE="n0"
-	    NUM="100"
-	    ;;
-	"D9")
-	    NODE="n1"
-	    NUM="101"
-	    ;;
-	"15")
-	    NODE="n2"
-	    NUM="102"
-	    ;;
-	"81")
-	    NODE="n3"
-	    NUM="103"
-	    ;;
-	"09")
-	    NODE="n4"
-	    NUM="104"
-	    ;;
-	"87")
-	    NODE="n5"
-	    NUM="105"
-	    ;;
-	"A3")
-	    NODE="n6"
-	    NUM="106"
-	    ;;
-	"79")
-	    NODE="n7"
-	    NUM="107"
-	    ;;
-	"59")
-	    NODE="n8"
-	    NUM="108"
-	    ;;
-	"D5")
-	    NODE="n9"
-	    NUM="109"
-	    ;;
-	*)
-	    NODE="nn"
-	    NUM="200"
+        "19")
+            NODE="n0"
+            NUM="100"
+            ;;
+        "D9")
+            NODE="n1"
+            NUM="101"
+            ;;
+        "15")
+            NODE="n2"
+            NUM="102"
+            ;;
+        "81")
+            NODE="n3"
+            NUM="103"
+            ;;
+        "09")
+            NODE="n4"
+            NUM="104"
+            ;;
+        "87")
+            NODE="n5"
+            NUM="105"
+            ;;
+        "A3")
+            NODE="n6"
+            NUM="106"
+            ;;
+        "79")
+            NODE="n7"
+            NUM="107"
+            ;;
+        "59")
+            NODE="n8"
+            NUM="108"
+            ;;
+        "D5")
+            NODE="n9"
+            NUM="109"
+            ;;
+        *)
+            NODE="nn"
+            NUM="200"
     esac
 
     ifconfig eth0 10.0.0.${NUM}
@@ -72,11 +72,17 @@ fi
 sed -i -e "s/OpenWrt/${NODE}/" /etc/config/system
 echo ${NODE} > /proc/sys/kernel/hostname
 
-# Setup B.A.T.M.A.N.
+# Setup hard iface
 ifconfig ${IF} netmask 255.255.255.0
 ifconfig ${IF} mtu 1600
 ifconfig ${IF} up
 ifconfig ${IF} promisc
+
+# Setup batman-adv
 batctl if add ${IF}
+echo 1 > /sys/devices/virtual/net/bat0/mesh/catwoman
+echo 100 > /sys/devices/virtual/net/bat0/mesh/catwoman_hold
+echo 200 > /sys/devices/virtual/net/bat0/mesh/catwoman_purge
+
 ifconfig bat0 10.10.0.${NUM}
 ifconfig bat0 up
