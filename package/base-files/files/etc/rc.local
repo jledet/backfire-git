@@ -10,8 +10,8 @@ if [ ${ARCH} = "i686" ]; then
 
     # Setup for emulation
     IF="eth0"
-    NUM=${LB}
-    NODE="n${LB}"
+    NUM=1${LB}
+    NODE="n$((0x${LB}))"
 
 else
 
