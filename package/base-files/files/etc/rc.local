@@ -5,38 +5,52 @@ LB=$(ifconfig eth0| grep HWaddr | sed 's/:01[\n\ ]*$//' | sed 's/.*://'| sed 's/
 
 case "${LB}" in
     "19")
+	NODE="n0"
         NUM="100"
         ;;
     "D9")
+	NODE="n1"
         NUM="101"
         ;;
     "15")
+	NODE="n2"
         NUM="102"
         ;;
     "81")
+	NODE="n3"
         NUM="103"
         ;;
     "09")
+	NODE="n4"
         NUM="104"
         ;;
     "87")
+	NODE="n5"
         NUM="105"
         ;;
     "A3")
+	NODE="n6"
         NUM="106"
         ;;
     "79")
+	NODE="n7"
         NUM="107"
         ;;
     "59")
+	NODE="n8"
         NUM="108"
         ;;
     "D5")
+	NODE="n9"
         NUM="109"
         ;;
     *)
+	NODE="nn"
         NUM="200"
 esac
+
+sed -i -e "s/OpenWrt/${NODE}/" /etc/config/system
+echo ${NODE} > /proc/sys/kernel/hostname
 
 ifconfig eth0 10.0.0.${NUM}
 ifconfig eth0 netmask 255.255.255.0
