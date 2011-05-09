@@ -66,11 +66,6 @@ else
             NUM="200"
     esac
 
-#    udhcpc -n eth0
-#    if [ $? -ne 0 ]; then
-#        ifconfig eth0 10.0.0.${NUM}
-#        ifconfig eth0 netmask 255.255.255.0
-#    fi
 fi
 
 # Setup hostname
@@ -80,7 +75,7 @@ echo ${NODE} > /proc/sys/kernel/hostname
 # Setup hard iface
 ifconfig ${IF} mtu 1600
 ifconfig ${IF} up
-ifconfig ${IF} promisc
+#ifconfig ${IF} promisc
 
 # Setup batman-adv
 batctl if add ${IF}
@@ -94,10 +89,18 @@ if [ ${IF} = "mesh0" ]; then
     iwconfig mesh0 txpower 15
     iwconfig mesh0 rate 2M fixed
     brctl addbr br0
-    brctl addif br0 eth0
     brctl addif br0 bat0
     ifconfig br0 10.10.0.${NUM} netmask 255.255.255.0
     ifconfig br0 up
     ifconfig bat0 up
+
+    # Try to get dhcp on eth0
+    udhcpc -n eth0
+    if [ $? -ne 0 ]; then
+        # dhcp failed, bridge instead
+        brctl addif br0 eth0
+    fi
+
+    python /bin/cmd.py &
 fi
 
