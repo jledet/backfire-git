@@ -87,7 +87,7 @@ if [ ${IF} = "mesh0" ]; then
     ifconfig wifi0 txqueuelen 10
     iwconfig mesh0 rts 10
     iwconfig mesh0 txpower 15
-    iwconfig mesh0 rate 2M fixed
+    iwconfig mesh0 rate 11M fixed
     brctl addbr br0
     brctl addif br0 bat0
     ifconfig br0 10.10.0.${NUM} netmask 255.255.255.0
