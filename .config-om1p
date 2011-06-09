@@ -1,7 +1,7 @@
 #
 # Automatically generated make config: don't edit
 # OpenWrt version: Backfire (r26713)
-# Thu May  5 15:25:00 2011
+# Thu Jun  9 12:27:48 2011
 #
 CONFIG_HAVE_DOT_CONFIG=y
 # CONFIG_TARGET_ppc40x is not set
@@ -26,16 +26,6 @@ CONFIG_TARGET_atheros=y
 # CONFIG_TARGET_ar7 is not set
 # CONFIG_TARGET_uml is not set
 # CONFIG_TARGET_x86 is not set
-# CONFIG_TARGET_rdc_ar525w is not set
-# CONFIG_TARGET_rdc_bifferboard is not set
-# CONFIG_TARGET_rdc_r8610 is not set
-# CONFIG_TARGET_rdc_sitecom is not set
-# CONFIG_TARGET_brcm63xx_Broadcom is not set
-# CONFIG_TARGET_brcm63xx_Atheros is not set
-# CONFIG_TARGET_brcm63xx_Ralink is not set
-# CONFIG_TARGET_brcm63xx_NoWiFi is not set
-# CONFIG_TARGET_brcm63xx_GW6X00 is not set
-# CONFIG_TARGET_uml_Default is not set
 # CONFIG_TARGET_brcm47xx_Broadcom-b43 is not set
 # CONFIG_TARGET_brcm47xx_Atheros is not set
 # CONFIG_TARGET_brcm47xx_Atheros-ath5k is not set
@@ -44,27 +34,22 @@ CONFIG_TARGET_atheros=y
 # CONFIG_TARGET_brcm47xx_WL500GPv1 is not set
 # CONFIG_TARGET_brcm47xx_WRT350Nv1 is not set
 # CONFIG_TARGET_brcm47xx_WRTSL54GS is not set
-# CONFIG_TARGET_brcm_2_4_Broadcom is not set
-# CONFIG_TARGET_brcm_2_4_BroadcomMimo is not set
-# CONFIG_TARGET_brcm_2_4_None is not set
-# CONFIG_TARGET_brcm_2_4_USBGeneric is not set
-# CONFIG_TARGET_brcm_2_4_WL500G is not set
-# CONFIG_TARGET_brcm_2_4_WL500GD is not set
-# CONFIG_TARGET_brcm_2_4_WL500GP is not set
-# CONFIG_TARGET_brcm_2_4_WL700GE is not set
-# CONFIG_TARGET_brcm_2_4_WLHDD is not set
-# CONFIG_TARGET_brcm_2_4_WRT300Nv11 is not set
-# CONFIG_TARGET_brcm_2_4_WRT54G3G is not set
-# CONFIG_TARGET_brcm_2_4_WRT610Nv1 is not set
-# CONFIG_TARGET_octeon_generic is not set
-# CONFIG_TARGET_octeon_mototech is not set
-# CONFIG_TARGET_octeon_simulator is not set
-# CONFIG_TARGET_ppc40x_Default is not set
-# CONFIG_TARGET_ifxmips_None is not set
-# CONFIG_TARGET_ifxmips_Atheros is not set
-# CONFIG_TARGET_ifxmips_Ralink is not set
-# CONFIG_TARGET_orion_generic_Default is not set
-# CONFIG_TARGET_orion_harddisk_Default is not set
+CONFIG_TARGET_atheros_Default=y
+# CONFIG_TARGET_ppc44x_Default is not set
+# CONFIG_TARGET_rb532_Default is not set
+# CONFIG_TARGET_cobalt_Default is not set
+# CONFIG_TARGET_brcm63xx_Broadcom is not set
+# CONFIG_TARGET_brcm63xx_Atheros is not set
+# CONFIG_TARGET_brcm63xx_Ralink is not set
+# CONFIG_TARGET_brcm63xx_NoWiFi is not set
+# CONFIG_TARGET_brcm63xx_GW6X00 is not set
+# CONFIG_TARGET_ixp4xx_generic_Default is not set
+# CONFIG_TARGET_ixp4xx_generic_Atheros-ath5k is not set
+# CONFIG_TARGET_ixp4xx_generic_NSLU2 is not set
+# CONFIG_TARGET_ixp4xx_generic_NAS100d is not set
+# CONFIG_TARGET_ixp4xx_generic_DSMG600RevA is not set
+# CONFIG_TARGET_ixp4xx_generic_USR8200 is not set
+# CONFIG_TARGET_ixp4xx_harddisk_FSG3 is not set
 # CONFIG_TARGET_ar71xx_Default is not set
 # CONFIG_TARGET_ar71xx_DefaultNoWifi is not set
 # CONFIG_TARGET_ar71xx_Madwifi is not set
@@ -96,25 +81,6 @@ CONFIG_TARGET_atheros=y
 # CONFIG_TARGET_ar71xx_UBNTRS is not set
 # CONFIG_TARGET_ar71xx_UBNTRSPRO is not set
 # CONFIG_TARGET_ar71xx_UBNT is not set
-# CONFIG_TARGET_rb532_Default is not set
-# CONFIG_TARGET_ppc44x_Default is not set
-# CONFIG_TARGET_cobalt_Default is not set
-# CONFIG_TARGET_au1000_au1500_Atheros is not set
-# CONFIG_TARGET_au1000_au1500_InternetBox is not set
-# CONFIG_TARGET_au1000_au1500_MeshCube is not set
-# CONFIG_TARGET_au1000_au1550_DBAu1550 is not set
-# CONFIG_TARGET_ixp4xx_generic_Default is not set
-# CONFIG_TARGET_ixp4xx_generic_Atheros-ath5k is not set
-# CONFIG_TARGET_ixp4xx_generic_NSLU2 is not set
-# CONFIG_TARGET_ixp4xx_generic_NAS100d is not set
-# CONFIG_TARGET_ixp4xx_generic_DSMG600RevA is not set
-# CONFIG_TARGET_ixp4xx_generic_USR8200 is not set
-# CONFIG_TARGET_ixp4xx_harddisk_FSG3 is not set
-# CONFIG_TARGET_ar7_Annex-A is not set
-# CONFIG_TARGET_ar7_Annex-B is not set
-# CONFIG_TARGET_ar7_Texas is not set
-# CONFIG_TARGET_ar7_None is not set
-CONFIG_TARGET_atheros_Default=y
 # CONFIG_TARGET_x86_generic_Generic is not set
 # CONFIG_TARGET_x86_generic_Alix is not set
 # CONFIG_TARGET_x86_generic_Soekris45xx is not set
@@ -123,7 +89,42 @@ CONFIG_TARGET_atheros_Default=y
 # CONFIG_TARGET_x86_olpc_Default is not set
 # CONFIG_TARGET_x86_xen_domu_Default is not set
 # CONFIG_TARGET_x86_ep80579_Default is not set
+# CONFIG_TARGET_octeon_generic is not set
+# CONFIG_TARGET_octeon_mototech is not set
+# CONFIG_TARGET_octeon_simulator is not set
+# CONFIG_TARGET_ppc40x_Default is not set
 # CONFIG_TARGET_kirkwood_Default is not set
+# CONFIG_TARGET_au1000_au1500_Atheros is not set
+# CONFIG_TARGET_au1000_au1500_InternetBox is not set
+# CONFIG_TARGET_au1000_au1500_MeshCube is not set
+# CONFIG_TARGET_au1000_au1550_DBAu1550 is not set
+# CONFIG_TARGET_rdc_ar525w is not set
+# CONFIG_TARGET_rdc_bifferboard is not set
+# CONFIG_TARGET_rdc_r8610 is not set
+# CONFIG_TARGET_rdc_sitecom is not set
+# CONFIG_TARGET_brcm_2_4_Broadcom is not set
+# CONFIG_TARGET_brcm_2_4_BroadcomMimo is not set
+# CONFIG_TARGET_brcm_2_4_None is not set
+# CONFIG_TARGET_brcm_2_4_USBGeneric is not set
+# CONFIG_TARGET_brcm_2_4_WL500G is not set
+# CONFIG_TARGET_brcm_2_4_WL500GD is not set
+# CONFIG_TARGET_brcm_2_4_WL500GP is not set
+# CONFIG_TARGET_brcm_2_4_WL700GE is not set
+# CONFIG_TARGET_brcm_2_4_WLHDD is not set
+# CONFIG_TARGET_brcm_2_4_WRT300Nv11 is not set
+# CONFIG_TARGET_brcm_2_4_WRT54G3G is not set
+# CONFIG_TARGET_brcm_2_4_WRT610Nv1 is not set
+# CONFIG_TARGET_avr32_Default is not set
+# CONFIG_TARGET_uml_Default is not set
+# CONFIG_TARGET_xburst_qi_lb60_Default is not set
+# CONFIG_TARGET_xburst_n516_Default is not set
+# CONFIG_TARGET_xburst_n526_Default is not set
+# CONFIG_TARGET_orion_generic_Default is not set
+# CONFIG_TARGET_orion_harddisk_Default is not set
+# CONFIG_TARGET_ar7_Annex-A is not set
+# CONFIG_TARGET_ar7_Annex-B is not set
+# CONFIG_TARGET_ar7_Texas is not set
+# CONFIG_TARGET_ar7_None is not set
 # CONFIG_TARGET_adm5120_router_le_Generic is not set
 # CONFIG_TARGET_adm5120_router_le_CAS630 is not set
 # CONFIG_TARGET_adm5120_router_le_CAS630W is not set
@@ -153,10 +154,9 @@ CONFIG_TARGET_atheros_Default=y
 # CONFIG_TARGET_adm5120_router_be_Generic is not set
 # CONFIG_TARGET_adm5120_router_be_P334WT is not set
 # CONFIG_TARGET_adm5120_router_be_P335WT is not set
-# CONFIG_TARGET_avr32_Default is not set
-# CONFIG_TARGET_xburst_qi_lb60_Default is not set
-# CONFIG_TARGET_xburst_n516_Default is not set
-# CONFIG_TARGET_xburst_n526_Default is not set
+# CONFIG_TARGET_ifxmips_None is not set
+# CONFIG_TARGET_ifxmips_Atheros is not set
+# CONFIG_TARGET_ifxmips_Ralink is not set
 CONFIG_TARGET_BOARD="atheros"
 CONFIG_TARGET_ARCH_PACKAGES="atheros"
 CONFIG_DEFAULT_TARGET_OPTIMIZATION="-Os -pipe -mips32 -mtune=mips32 -funit-at-a-time"
@@ -235,9 +235,9 @@ CONFIG_SHADOW_PASSWORDS=y
 #
 CONFIG_KERNEL_DEBUG_FS=y
 # CONFIG_KERNEL_PROFILING is not set
-# CONFIG_KERNEL_KALLSYMS is not set
-# CONFIG_KERNEL_DEBUG_KERNEL is not set
-# CONFIG_KERNEL_DEBUG_INFO is not set
+CONFIG_KERNEL_KALLSYMS=y
+CONFIG_KERNEL_DEBUG_KERNEL=y
+CONFIG_KERNEL_DEBUG_INFO=y
 
 #
 # Package build options
@@ -1048,69 +1048,6 @@ CONFIG_PACKAGE_udevtrigger=y
 CONFIG_PACKAGE_wireless-tools=y
 
 #
-# Network
-#
-
-#
-# File Transfer
-#
-# CONFIG_PACKAGE_iputils-tftpd is not set
-# CONFIG_PACKAGE_arptables is not set
-# CONFIG_PACKAGE_crda is not set
-# CONFIG_PACKAGE_ebtables is not set
-# CONFIG_PACKAGE_ebtables-utils is not set
-CONFIG_PACKAGE_ethtool=y
-# CONFIG_PACKAGE_genl is not set
-# CONFIG_PACKAGE_hostapd is not set
-# CONFIG_PACKAGE_hostapd-mini is not set
-# CONFIG_PACKAGE_hostapd-utils is not set
-# CONFIG_PACKAGE_ifenslave is not set
-# CONFIG_PACKAGE_ip is not set
-# CONFIG_PACKAGE_iperf is not set
-CONFIG_PACKAGE_iperf-mt=y
-# CONFIG_PACKAGE_ipset is not set
-CONFIG_PACKAGE_iptables=y
-CONFIG_PACKAGE_iptables-mod-conntrack=y
-# CONFIG_PACKAGE_iptables-mod-conntrack-extra is not set
-# CONFIG_PACKAGE_iptables-mod-extra is not set
-# CONFIG_PACKAGE_iptables-mod-filter is not set
-# CONFIG_PACKAGE_iptables-mod-hashlimit is not set
-# CONFIG_PACKAGE_iptables-mod-imq is not set
-# CONFIG_PACKAGE_iptables-mod-ipopt is not set
-# CONFIG_PACKAGE_iptables-mod-iprange is not set
-# CONFIG_PACKAGE_iptables-mod-ipsec is not set
-# CONFIG_PACKAGE_iptables-mod-ipset is not set
-CONFIG_PACKAGE_iptables-mod-nat=y
-# CONFIG_PACKAGE_iptables-mod-nat-extra is not set
-# CONFIG_PACKAGE_iptables-mod-ulog is not set
-# CONFIG_PACKAGE_iptables-utils is not set
-# CONFIG_PACKAGE_iputils-arping is not set
-# CONFIG_PACKAGE_iputils-clockdiff is not set
-CONFIG_PACKAGE_iputils-ping=y
-# CONFIG_PACKAGE_iputils-tracepath is not set
-CONFIG_PACKAGE_iw=y
-CONFIG_PACKAGE_netcat=y
-# CONFIG_PACKAGE_ppp is not set
-# CONFIG_PACKAGE_pptp is not set
-# CONFIG_PACKAGE_relayd is not set
-# CONFIG_PACKAGE_tc is not set
-CONFIG_PACKAGE_tcpdump=y
-# CONFIG_PACKAGE_tcpdump-mini is not set
-CONFIG_PACKAGE_ttcp=y
-# CONFIG_PACKAGE_uhttpd is not set
-# CONFIG_PACKAGE_wpa-cli is not set
-# CONFIG_PACKAGE_wpa-supplicant is not set
-# CONFIG_WPA_SUPPLICANT_NO_TIMESTAMP_CHECK is not set
-# CONFIG_WPA_RFKILL_SUPPORT is not set
-# CONFIG_DRIVER_WEXT_SUPPORT is not set
-# CONFIG_DRIVER_11N_SUPPORT is not set
-# CONFIG_PACKAGE_wpa-supplicant-mini is not set
-# CONFIG_PACKAGE_wpad is not set
-CONFIG_PACKAGE_wpad-mini=y
-# CONFIG_PACKAGE_wprobe-export is not set
-# CONFIG_PACKAGE_wprobe-util is not set
-
-#
 # Libraries
 #
 
@@ -1161,6 +1098,69 @@ CONFIG_PACKAGE_libxtables=y
 # CONFIG_PACKAGE_linux-atm is not set
 CONFIG_PACKAGE_uclibcxx=y
 CONFIG_PACKAGE_zlib=y
+
+#
+# Network
+#
+
+#
+# File Transfer
+#
+# CONFIG_PACKAGE_iputils-tftpd is not set
+# CONFIG_PACKAGE_arptables is not set
+# CONFIG_PACKAGE_crda is not set
+CONFIG_PACKAGE_ebtables=y
+CONFIG_PACKAGE_ebtables-utils=y
+CONFIG_PACKAGE_ethtool=y
+# CONFIG_PACKAGE_genl is not set
+# CONFIG_PACKAGE_hostapd is not set
+# CONFIG_PACKAGE_hostapd-mini is not set
+# CONFIG_PACKAGE_hostapd-utils is not set
+# CONFIG_PACKAGE_ifenslave is not set
+# CONFIG_PACKAGE_ip is not set
+# CONFIG_PACKAGE_iperf is not set
+CONFIG_PACKAGE_iperf-mt=y
+# CONFIG_PACKAGE_ipset is not set
+CONFIG_PACKAGE_iptables=y
+CONFIG_PACKAGE_iptables-mod-conntrack=y
+# CONFIG_PACKAGE_iptables-mod-conntrack-extra is not set
+# CONFIG_PACKAGE_iptables-mod-extra is not set
+# CONFIG_PACKAGE_iptables-mod-filter is not set
+# CONFIG_PACKAGE_iptables-mod-hashlimit is not set
+# CONFIG_PACKAGE_iptables-mod-imq is not set
+# CONFIG_PACKAGE_iptables-mod-ipopt is not set
+# CONFIG_PACKAGE_iptables-mod-iprange is not set
+# CONFIG_PACKAGE_iptables-mod-ipsec is not set
+# CONFIG_PACKAGE_iptables-mod-ipset is not set
+CONFIG_PACKAGE_iptables-mod-nat=y
+# CONFIG_PACKAGE_iptables-mod-nat-extra is not set
+# CONFIG_PACKAGE_iptables-mod-ulog is not set
+# CONFIG_PACKAGE_iptables-utils is not set
+# CONFIG_PACKAGE_iputils-arping is not set
+# CONFIG_PACKAGE_iputils-clockdiff is not set
+CONFIG_PACKAGE_iputils-ping=y
+# CONFIG_PACKAGE_iputils-tracepath is not set
+CONFIG_PACKAGE_iw=y
+CONFIG_PACKAGE_netcat=y
+# CONFIG_PACKAGE_ppp is not set
+# CONFIG_PACKAGE_pptp is not set
+# CONFIG_PACKAGE_relayd is not set
+# CONFIG_PACKAGE_tc is not set
+CONFIG_PACKAGE_tcpdump=y
+# CONFIG_PACKAGE_tcpdump-mini is not set
+CONFIG_PACKAGE_ttcp=y
+# CONFIG_PACKAGE_uhttpd is not set
+# CONFIG_PACKAGE_wpa-cli is not set
+# CONFIG_PACKAGE_wpa-supplicant is not set
+# CONFIG_WPA_SUPPLICANT_NO_TIMESTAMP_CHECK is not set
+# CONFIG_WPA_RFKILL_SUPPORT is not set
+# CONFIG_DRIVER_WEXT_SUPPORT is not set
+# CONFIG_DRIVER_11N_SUPPORT is not set
+# CONFIG_PACKAGE_wpa-supplicant-mini is not set
+# CONFIG_PACKAGE_wpad is not set
+CONFIG_PACKAGE_wpad-mini=y
+# CONFIG_PACKAGE_wprobe-export is not set
+# CONFIG_PACKAGE_wprobe-util is not set
 
 #
 # IPv6
@@ -1250,7 +1250,10 @@ CONFIG_PACKAGE_zlib=y
 # Netfilter Extensions
 #
 # CONFIG_PACKAGE_kmod-arptables is not set
-# CONFIG_PACKAGE_kmod-ebtables is not set
+CONFIG_PACKAGE_kmod-ebtables=y
+# CONFIG_PACKAGE_kmod-ebtables-ipv4 is not set
+# CONFIG_PACKAGE_kmod-ebtables-ipv6 is not set
+# CONFIG_PACKAGE_kmod-ebtables-watchers is not set
 # CONFIG_PACKAGE_kmod-ip6tables is not set
 CONFIG_PACKAGE_kmod-ipt-core=y
 CONFIG_PACKAGE_kmod-ipt-conntrack=y
@@ -1330,8 +1333,8 @@ CONFIG_PACKAGE_kmod-pppoe=y
 # CONFIG_PACKAGE_kmod-button-hotplug is not set
 # CONFIG_PACKAGE_kmod-compcache is not set
 CONFIG_PACKAGE_kmod-crc-ccitt=y
-# CONFIG_PACKAGE_kmod-crc-itu-t is not set
-# CONFIG_PACKAGE_kmod-crc16 is not set
+CONFIG_PACKAGE_kmod-crc-itu-t=y
+CONFIG_PACKAGE_kmod-crc16=y
 # CONFIG_PACKAGE_kmod-crc7 is not set
 # CONFIG_PACKAGE_kmod-eeprom-93cx6 is not set
 # CONFIG_PACKAGE_kmod-gpio-dev is not set
