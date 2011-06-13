@@ -1,6 +1,6 @@
 #!/bin/bash
 
 make package/batman-adv/clean
-make package/batman-adv/compile
+make package/batman-adv/compile -j3
 make package/batman-adv/install
-make target/install
+make target/install -j3
